@@ -154,17 +154,15 @@ findbar, #navigator-toolbox, #urlbar-input, input[inputmode="search"] {
 .tab-background[selected] {
   border: var(--dtui-theme-border-width) solid rgb(var(--dtui-theme-accent-color)) !important;
 }
-.tabbrowser-tab[soundplaying], .tabbrowser-tab[muted], .tabbrowser-tab[activemedia-blocked] {
-  .tab-icon-image {
-    margin-left: 22px !important;
-    opacity: 1 !important;
-  }
+.tab-audio-button[soundplaying], .tab-audio-button[muted], .tab-audio-button[activemedia-blocked] {
+  display: flex !important;
+  order: -1 !important;
+  margin-left: -4px !important;
 }
-.tab-icon-overlay {
-  background-color: rgb(var(--dtui-theme-accent-color)) !important;
-  fill: rgb(var(--dtui-theme-text-color)) !important;
-  opacity: 1 !important;
+.tab-icon-stack[soundplaying], .tab-icon-stack[muted], .tab-icon-stack[activemedia-blocked] {
+  margin-right: 4px !important;
 }
+.button-background { border-radius: 9999px !important; }
 
 /* Specific elements styling */
 menuitem:hover, menuitem:where([_moz-menuactive]:not([disabled])), menu:where([_moz-menuactive]:not([disabled])) {
