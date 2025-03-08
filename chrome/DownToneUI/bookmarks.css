@@ -2,28 +2,30 @@
  * Bookmarks bar autohide
  * ========================================================================= */
 
-#navigator-toolbox { --browser-area-z-index-toolbox: 4 !important; } /* Container */
-#toolbar-menubar, #TabsToolbar, #nav-bar { z-index: 2 !important; } /* Container member */
-#PersonalToolbar { z-index: 1 !important; } /* Bookmarks bar below the other members */
+@media not (-moz-bool-pref:"sidebar.verticalTabs") {
+  #navigator-toolbox { --browser-area-z-index-toolbox: 4 !important; } /* Container */
+  #toolbar-menubar, #TabsToolbar, #nav-bar { z-index: 2 !important; } /* Container member */
+  #PersonalToolbar { z-index: 1 !important; } /* Bookmarks bar below the other members */
 
-/* Shadow for the Bookmarks bar */
-#PersonalToolbar { box-shadow: var(--dtui-theme-shadow) !important; }
+  /* Shadow for the Bookmarks bar */
+  #PersonalToolbar { box-shadow: var(--dtui-theme-shadow) !important; }
 
-/* Smaller bookmarks overflow button in compact mode */
-:root[uidensity="compact"] #PlacesChevron {
-  margin-block: 0px !important;
-  height: var(--dtui-ui-bookmarks-inner-height) !important;
-}
+  /* Smaller bookmarks overflow button in compact mode */
+  :root[uidensity="compact"] #PlacesChevron {
+    margin-block: 0px !important;
+    height: var(--dtui-ui-bookmarks-inner-height) !important;
+  }
 
-#PersonalToolbar { --bm-height: calc((-1 * var(--bookmark-block-padding) * 2) - var(--dtui-ui-bookmarks-inner-height)); }
-#navigator-toolbox:not(:hover) #PersonalToolbar:not([customizing]) { opacity: 0 !important; }
+  #PersonalToolbar { --bm-height: calc((-1 * var(--bookmark-block-padding) * 2) - var(--dtui-ui-bookmarks-inner-height)); }
+  #navigator-toolbox:not(:hover) #PersonalToolbar:not([customizing]) { opacity: 0 !important; }
 
-#navigator-toolbox:hover #PersonalToolbar:not([customizing]) {
-  margin-top: 0px !important;
-  margin-bottom: var(--bm-height) !important;
-}
-#PersonalToolbar:not([customizing]) {
-  margin-top: var(--bm-height) !important;
-  transition: margin var(--dtui-ui-bookmarks-animation-speed) ease-out var(--dtui-ui-bookmarks-hover-debounce),
-              opacity var(--dtui-ui-bookmarks-animation-speed) ease-out var(--dtui-ui-bookmarks-hover-debounce);
+  #navigator-toolbox:hover #PersonalToolbar:not([customizing]) {
+    margin-top: 0px !important;
+    margin-bottom: var(--bm-height) !important;
+  }
+  #PersonalToolbar:not([customizing]) {
+    margin-top: var(--bm-height) !important;
+    transition: margin var(--dtui-ui-bookmarks-animation-speed) ease-out var(--dtui-ui-bookmarks-hover-debounce),
+                opacity var(--dtui-ui-bookmarks-animation-speed) ease-out var(--dtui-ui-bookmarks-hover-debounce);
+  }
 }

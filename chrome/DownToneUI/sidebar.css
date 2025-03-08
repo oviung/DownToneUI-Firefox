@@ -2,24 +2,26 @@
  * Hide tab bar (with window controls in navbar) + Sidebar autohide
  * ========================================================================= */
 
-#TabsToolbar { visibility: collapse !important; }
-#nav-bar .titlebar-buttonbox-container { display: flex !important; }
+@media not (-moz-bool-pref:"sidebar.revamp") {
+  #TabsToolbar { visibility: collapse !important; }
+  #nav-bar .titlebar-buttonbox-container { display: flex !important; }
 
-/* Align History items favicons with the tabs */
-#historyTree { margin-left: -15px !important; }
+  /* Align History items favicons with the tabs */
+  #historyTree { margin-left: -15px !important; }
 
-#sidebar-header, #sidebar-splitter { display: none !important; }
+  #sidebar-header, #sidebar-splitter { display: none !important; }
 
-#sidebar-box {
-  min-width: var(--dtui-ui-sidebar-collapsed-width) !important;
-  max-width: var(--dtui-ui-sidebar-collapsed-width) !important;
-  z-index: 3 !important;
+  #sidebar-box {
+    min-width: var(--dtui-ui-sidebar-collapsed-width) !important;
+    max-width: var(--dtui-ui-sidebar-collapsed-width) !important;
+    z-index: 3 !important;
+  }
+  #main-window[inFullscreen="true"] #sidebar-box {
+    min-width: 0.01px !important;
+    max-width: 0.01px !important;
+  }
+  #sidebar-box:hover, #sidebar-box[sidebarcommand="viewBookmarksSidebar"], #sidebar-box[sidebarcommand="viewHistorySidebar"] {
+    #sidebar { min-width: var(--dtui-ui-sidebar-extended-width) !important; }
+  }
+  #sidebar { transition: min-width var(--dtui-ui-sidebar-animation-speed) ease-out var(--dtui-ui-sidebar-hover-debounce); }
 }
-#main-window[inFullscreen="true"] #sidebar-box {
-  min-width: 0.01px !important;
-  max-width: 0.01px !important;
-}
-#sidebar-box:hover, #sidebar-box[sidebarcommand="viewBookmarksSidebar"], #sidebar-box[sidebarcommand="viewHistorySidebar"] {
-  #sidebar { min-width: var(--dtui-ui-sidebar-extended-width) !important; }
-}
-#sidebar { transition: min-width var(--dtui-ui-sidebar-animation-speed) ease-out var(--dtui-ui-sidebar-hover-debounce); }

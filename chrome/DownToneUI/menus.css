@@ -7,7 +7,9 @@
 #context-bookmarkpage, #context-openlink, #context-print-selection,
 #context-savelink, #context-savelinktopocket, #context-pocket,
 #context-savepage, #context-selectall, #context-sep-selectall,
-#context-inspect-a11y { display: none !important; }
+#context-inspect-a11y, #toolbar-context-undoCloseTab +menuseparator {
+  display: none !important;
+}
 
 /* Popup animations */
 #appMenu-popup[panelopen], #unified-extensions-panel[panelopen], .panel-no-padding[panelopen],

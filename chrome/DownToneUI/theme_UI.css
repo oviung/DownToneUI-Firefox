@@ -106,8 +106,14 @@
   --panel-item-hover-bgcolor: rgba(var(--dtui-theme-accent-color), var(--dtui-theme-accent-mid-alpha)) !important;
   --panel-item-active-bgcolor: rgb(var(--dtui-theme-accent-color)) !important;
   --sidebar-background-color: rgb(var(--dtui-theme-main-color)) !important;
+  --sidebar-box-background: rgb(var(--dtui-theme-secondary-color)) !important;
   --sidebar-text-color: rgb(var(--dtui-theme-text-color)) !important;
   --sidebar-border-color: rgb(var(--dtui-theme-main-color)) !important;
+  --sidebar-box-border: var(--dtui-theme-border-width) solid var(--sidebar-box-border-color) !important;
+  --sidebar-box-border-color: var(--dtui-theme-border-color) !important;
+  --card-border-color: var(--dtui-theme-border-color) !important;
+  --card-border-width: var(--dtui-theme-border-width) !important;
+  --card-border-radius: var(--dtui-theme-border-radius) !important;
   --input-bgcolor: rgb(var(--dtui-theme-secondary-color)) !important;
   --input-color: rgb(var(--dtui-theme-text-color)) !important;
   --in-content-border-color: var(--dtui-theme-border-color) !important;
@@ -116,7 +122,7 @@
 }
 
 /* Shadows */
-slot, findbar, .menupopup-arrowscrollbox, .dialogBox, #customization-footer, .panel-arrowcontent,
+slot:not(.nested), findbar, .menupopup-arrowscrollbox, .dialogBox, #customization-footer, .panel-arrowcontent,
 #urlbar[breakout-extend], #statuspanel-label, #sidebar, #sidebar-header, #navigator-toolbox {
   --panel-shadow-margin: var(--dtui-theme-shadow-margin) !important;
   box-shadow: var(--dtui-theme-shadow) !important;
@@ -139,10 +145,10 @@ button, menuitem, input, #urlbar[breakout-extend], #statuspanel-label, tooltip, 
 search-textbox#search-box, button#viewButton {
   border-radius: var(--dtui-theme-border-radius) !important;
 }
-search-textbox#search-box:focus {
+search-textbox#search-box:focus, .search-container input:focus {
   outline: var(--dtui-theme-border-width) solid rgba(var(--dtui-theme-accent-color), var(--dtui-theme-accent-low-alpha)) !important;
 }
-findbar, #navigator-toolbox, #urlbar-input, input[inputmode="search"] {
+findbar, #navigator-toolbox, #urlbar-input, input[inputmode="search"], moz-card {
   border: none !important;
   border-radius: 0px !important;
 }
@@ -154,22 +160,25 @@ findbar, #navigator-toolbox, #urlbar-input, input[inputmode="search"] {
 .tab-background[selected] {
   border: var(--dtui-theme-border-width) solid rgb(var(--dtui-theme-accent-color)) !important;
 }
-.tab-audio-button[soundplaying], .tab-audio-button[muted], .tab-audio-button[activemedia-blocked] {
-  display: flex !important;
-  order: -1 !important;
-  margin-left: -4px !important;
+@media not (-moz-bool-pref:"sidebar.verticalTabs") {
+  .tab-audio-button[soundplaying], .tab-audio-button[muted], .tab-audio-button[activemedia-blocked] {
+    display: flex !important;
+    order: -1 !important;
+    margin-left: -4px !important;
+  }
+  .tab-icon-stack[soundplaying], .tab-icon-stack[muted], .tab-icon-stack[activemedia-blocked] {
+    margin-right: 4px !important;
+  }
+  .button-background { border-radius: 9999px !important; }
 }
-.tab-icon-stack[soundplaying], .tab-icon-stack[muted], .tab-icon-stack[activemedia-blocked] {
-  margin-right: 4px !important;
-}
-.button-background { border-radius: 9999px !important; }
 
 /* Specific elements styling */
 menuitem:hover, menuitem:where([_moz-menuactive]:not([disabled])), menu:where([_moz-menuactive]:not([disabled])) {
   background-color: rgba(var(--dtui-theme-accent-color), var(--dtui-theme-accent-mid-alpha)) !important;
   color: rgb(var(--dtui-theme-text-color)) !important;
 }
-.sidebar-panel, #password-notification, #report-broken-site-popup-mainView {
+.sidebar-panel, #password-notification, #report-broken-site-popup-mainView, fieldset #inputs,
+#moz-card-details {
   background-color: rgb(var(--dtui-theme-main-color)) !important;
 }
 search-textbox#search-box, #moz-toggle-button[aria-pressed="false"], #statuspanel-label,

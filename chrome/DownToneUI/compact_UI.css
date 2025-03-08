@@ -8,11 +8,13 @@
 * { --urlbar-container-height: var(--urlbar-min-height) !important; }
 
 /* Remove spaces around navbar buttons */
-.toolbarbutton-1, .chromeclass-toolbar-additional {
+.toolbarbutton-1:not(#tabs-newtab-button), .chromeclass-toolbar-additional {
   padding: 0px !important;
   margin: 0px !important;
 }
-.titlebar-spacer[type="pre-tabs"], .titlebar-spacer[type="post-tabs"] { display: none !important; }
+.titlebar-spacer[type="pre-tabs"], .titlebar-spacer[type="post-tabs"], #vertical-spacer {
+  display: none !important;
+}
 
 /* Decrease padding on status URL, tooltips */
 tooltip, #statuspanel-label { padding: 2px !important; }

@@ -1,18 +1,18 @@
-> A modular UI customization for Firefox, removing borders in the favor of shadows to emphasize the layer elevation.\
-> Sidebery is used for the vertical tabs.
+> A modular UI customization for Firefox, removing borders in the favor of shadows to emphasize the layer elevation.
 
 ![Preview](assets/preview.gif "Preview")
 
 ## Install
 
 1. Set Firefox theme to `Dark` in: Firefox settings > Extensions & Themes > Themes.
-2. Vertical tabs *(Optional, see [Customization](#Customization))*:
+2. Go to `about:config` (in the URL bar) and set `toolkit.legacyUserProfileCustomizations.stylesheets = true`.
+3. Go to `about:support` > Search for "Profile Directory" > Open > Copy the "chrome" folder to this location.
+4. Restart Firefox.
+5. *(Optional)* Vertical tabs using Sidebery:
+    * Go to `about:config` and set `sidebar.revamp = false`.
     * Install the [Sidebery extension](https://addons.mozilla.org/en-US/firefox/addon/sidebery/).
     * Go to Sidebery settings (right-click extension) > Help > Import addon data > Choose file `sidebery/settings.json`.
     * *(Optional)* For tab previews: Sidebery settings > Search for "Tabs preview" > Enable and grant permissions.
-3. Go to `about:config` (in the URL bar) and set `toolkit.legacyUserProfileCustomizations.stylesheets = true`.
-4. Go to `about:support` > Search for "Profile Directory" > Open > Copy the "chrome" folder to this location.
-5. Restart Firefox.
 
 ## Uninstall
 
@@ -24,8 +24,6 @@ For Sidebery: Sidebery settings > Help > Reset settings.
 * It's recommended that additions or updates of the default styles to be done in the following files (which should be created by you). This way, your local changes will persist when this repository is updated.
     * `chrome/DownToneUI/override_chrome.css` for changes to `chrome/userChrome.css`
     * `chrome/DownToneUI/override_content.css` for changes to `chrome/userContent.css`
-* For normal (horizontal) tabs:
-    * In file `chrome/userChrome.css` remove the line `@import "DownToneUI/sidebar.css";`.
 * Changing the color scheme:
     * This can be done in `chrome/DownToneUI/_globals.css` by modifying the `--dtui-theme` variables.
     * **NOTE:** if vertical tabs are used, these changes also have to be applied to: Sidebery settings > Style editor.
