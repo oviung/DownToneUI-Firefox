@@ -1,6 +1,0 @@
-/* ============================================================================
- * Visual guide to debug the bookmarks bar height
- * ========================================================================= */
-
-#PersonalToolbar { background-color: red !important; }
-#navigator-toolbox:not(:hover) #PersonalToolbar:not([customizing]) { opacity: 1 !important; }

@@ -34,12 +34,6 @@ For Sidebery: Sidebery settings > Help > Reset settings.
 
 ## Notes
 
-* The bookmarks bar inner height varies based on the font you use and maybe other factors (like scaling). To get the correct height, some trial & error might be needed.
-    * First, copy the contents of `addons/chrome_debug_bookmarks_height.css.css` to your `chrome/DownToneUI/override_chrome.css`
-    * Decrease the value of `--dtui-ui-bookmarks-inner-height` in `chrome/DownToneUI/_globals.css` until the red background is visible. (Firefox restart is needed after every change)
-
-        ![example_low_height](assets/example_low_height.png "example_low_height")
-    * Set it to the value where the red background is NOT visible.
 * To open the sidebar tabs (in case you've gone to History or entered Private Mode): click on the Sidebery extension or use shortcut CTRL+E (shortcut is not working in Windows).
 
 ## Credits
