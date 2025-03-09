@@ -206,6 +206,3 @@ tooltip, #statuspanel-label, #downloads-button {
 .autoscroller { opacity: 0 !important; }
 #statuspanel { margin: 10px !important; }
 search-textbox#search-box, button#viewButton, tooltip { appearance: none !important; }
-
-/* Clean extensions menu */
-#unified-extensions-panel { .panel-header, toolbarseparator, #unified-extensions-manage-extensions { display: none !important; }}

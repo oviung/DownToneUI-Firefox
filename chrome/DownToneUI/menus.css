@@ -11,6 +11,9 @@
   display: none !important;
 }
 
+/* Clean extensions menu */
+#unified-extensions-panel { .panel-header, toolbarseparator, #unified-extensions-manage-extensions { display: none !important; }}
+
 /* Popup animations */
 #appMenu-popup[panelopen], #unified-extensions-panel[panelopen], .panel-no-padding[panelopen],
 .bookmark-item[open] .toolbar-menupopup {
