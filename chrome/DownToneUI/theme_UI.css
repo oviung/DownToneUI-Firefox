@@ -160,7 +160,7 @@ findbar, #navigator-toolbox, #urlbar-input, input[inputmode="search"], moz-card 
 .tab-background[selected] {
   border: var(--dtui-theme-border-width) solid rgb(var(--dtui-theme-accent-color)) !important;
 }
-@media not (-moz-bool-pref:"sidebar.verticalTabs") {
+@media not (-moz-bool-pref:"sidebar.verticalTabs"), not -moz-pref("sidebar.verticalTabs") {
   .tab-audio-button[soundplaying], .tab-audio-button[muted], .tab-audio-button[activemedia-blocked] {
     display: flex !important;
     order: -1 !important;

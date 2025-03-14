@@ -4,7 +4,7 @@
 
 #sidebar-main { -moz-window-dragging: drag !important; }
 
-@media not (-moz-bool-pref:"sidebar.revamp") {
+@media not (-moz-bool-pref:"sidebar.revamp"), not -moz-pref("sidebar.revamp") {
   #TabsToolbar { visibility: collapse !important; }
   #nav-bar .titlebar-buttonbox-container { display: flex !important; }
 
