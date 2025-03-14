@@ -8,7 +8,7 @@
 * { --urlbar-container-height: var(--urlbar-min-height) !important; }
 
 /* Remove spaces around navbar buttons */
-.toolbarbutton-1:not(#tabs-newtab-button), .chromeclass-toolbar-additional {
+.toolbarbutton-1:not(#tabs-newtab-button), .chromeclass-toolbar-additional:not(#urlbar-searchmode-switcher) {
   padding: 0px !important;
   margin: 0px !important;
 }
