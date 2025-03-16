@@ -15,11 +15,20 @@
 #unified-extensions-panel { .panel-header, toolbarseparator, #unified-extensions-manage-extensions { display: none !important; }}
 
 /* Popup animations */
-#appMenu-popup[panelopen], #unified-extensions-panel[panelopen], .panel-no-padding[panelopen],
+#appMenu-popup[animate="open"], #unified-extensions-panel[animate="open"], .panel-no-padding[animate="open"],
 .bookmark-item[open] .toolbar-menupopup {
   animation: popup-animation var(--dtui-ui-menu-animation-speed) ease-out;
 }
-#window-modal-dialog[open], #customizationui-widget-panel[panelopen] {
-    animation: popup-animation var(--dtui-ui-window-animation-speed) ease-out;
+#window-modal-dialog[open] {
+  animation: popup-animation var(--dtui-ui-window-animation-speed) ease-out;
 }
-@keyframes popup-animation { 60% { transform: scale(0.95); }}
+@keyframes popup-animation {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

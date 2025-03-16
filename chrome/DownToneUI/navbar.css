@@ -18,6 +18,6 @@
   animation: urlbar-animation var(--dtui-ui-urlbar-animation-speed) ease-out;
 }
 @keyframes urlbar-animation {
-  0% { transform: scaleY(0.97); }
+  0% { transform: scaleY(0.95); }
   100% { transform: scaleY(1); }
 }
