@@ -6,6 +6,7 @@
 
 /* Remove top & bottom margins from urlbar */
 * { --urlbar-container-height: var(--urlbar-min-height) !important; }
+#nav-bar { max-height: var(--urlbar-min-height) !important; }
 
 /* Remove spaces around navbar buttons */
 .toolbarbutton-1:not(#tabs-newtab-button), .chromeclass-toolbar-additional:not(#urlbar-searchmode-switcher) {
