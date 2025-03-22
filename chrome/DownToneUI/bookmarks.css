@@ -4,16 +4,14 @@
 
 #navigator-toolbox { --browser-area-z-index-toolbox: 4 !important; }
 #nav-bar { z-index: 2 !important; }
-#PersonalToolbar {
-  z-index: 1 !important;
+#PersonalToolbar { z-index: 1 !important; }
+
+#PlacesToolbarItems > .bookmark-item, #PersonalToolbar > #import-button, #OtherBookmarks {
   padding-block: var(--bookmark-block-padding) !important;
 }
 
 #PersonalToolbar:not([customizing]) {
   margin-bottom: calc(0px - var(--dtui-ui-bookmarks-inner-height) - 2 * var(--bookmark-block-padding));
-  @media -moz-pref("sidebar.verticalTabs") {
-    margin-bottom: calc(2px - var(--dtui-ui-bookmarks-inner-height) - 2 * var(--bookmark-block-padding));
-  }
   background-color: inherit !important;
   transform-origin: top;
   transform: rotateX(90deg);
