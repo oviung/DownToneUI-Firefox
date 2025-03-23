@@ -14,8 +14,8 @@
   #sidebar-header, #sidebar-splitter { display: none !important; }
 
   #sidebar-box {
-    min-width: var(--dtui-ui-sidebar-collapsed-width) !important;
-    max-width: var(--dtui-ui-sidebar-collapsed-width) !important;
+    min-width: var(--dtui-sidebar-collapsed-width) !important;
+    max-width: var(--dtui-sidebar-collapsed-width) !important;
     z-index: 3 !important;
   }
   #main-window[inFullscreen="true"] #sidebar-box {
@@ -23,7 +23,7 @@
     max-width: 0.01px !important;
   }
   #sidebar-box:hover, #sidebar-box[sidebarcommand="viewBookmarksSidebar"], #sidebar-box[sidebarcommand="viewHistorySidebar"] {
-    #sidebar { min-width: var(--dtui-ui-sidebar-extended-width) !important; }
+    #sidebar { min-width: var(--dtui-sidebar-extended-width) !important; }
   }
-  #sidebar { transition: min-width var(--dtui-ui-sidebar-animation-speed) ease-out var(--dtui-ui-sidebar-hover-debounce); }
+  #sidebar { transition: min-width var(--dtui-sidebar-animation-speed) ease-out var(--dtui-sidebar-hover-debounce); }
 }

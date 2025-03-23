@@ -20,8 +20,8 @@
   --dtui-theme-border-width: 2px;
   --dtui-theme-border-radius: 6px;
 
-  --dtui-ui-sidebar-hover-debounce: 0ms;
-  --dtui-ui-sidebar-animation-speed: 300ms;
+  --dtui-sidebar-hover-debounce: 0ms;
+  --dtui-sidebar-animation-speed: 300ms;
 }
 
 /* ============================================================================
@@ -32,13 +32,13 @@
   --dtui-theme-shadow-margin: 6px;
   --dtui-theme-shadow: 0px 0px var(--dtui-theme-shadow-margin) hsla(0, 0%, 0%, 0.4);
 
-  --dtui-ui-sidebar-collapsed-width: 34px;
-  --dtui-ui-sidebar-extended-width: 270px;
-  --dtui-ui-bookmarks-hover-debounce: 200ms;
-  --dtui-ui-bookmarks-animation-speed: 200ms;
-  --dtui-ui-menu-animation-speed: 250ms;
-  --dtui-ui-window-animation-speed: 350ms;
-  --dtui-ui-urlbar-animation-speed: 300ms;
+  --dtui-sidebar-collapsed-width: 34px;
+  --dtui-sidebar-extended-width: 270px;
+  --dtui-bookmarks-hover-debounce: 200ms;
+  --dtui-bookmarks-animation-speed: 200ms;
+  --dtui-menu-animation-speed: 250ms;
+  --dtui-window-animation-speed: 350ms;
+  --dtui-urlbar-animation-speed: 300ms;
 
-  --dtui-ui-bookmarks-inner-height: 20px; /* NOTE: this is affected by font typeface/size */
+  --dtui-bookmarks-inner-height: 20px; /* NOTE: this is affected by font typeface/size */
 }

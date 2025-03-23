@@ -17,10 +17,10 @@
 /* Popup animations */
 #appMenu-popup[animate="open"], #unified-extensions-panel[animate="open"], .panel-no-padding[animate="open"],
 .bookmark-item[open] .toolbar-menupopup {
-  animation: popup-animation var(--dtui-ui-menu-animation-speed) ease-out;
+  animation: popup-animation var(--dtui-menu-animation-speed) ease-out;
 }
 #window-modal-dialog[open] {
-  animation: popup-animation var(--dtui-ui-window-animation-speed) ease-out;
+  animation: popup-animation var(--dtui-window-animation-speed) ease-out;
 }
 @keyframes popup-animation {
   0% {

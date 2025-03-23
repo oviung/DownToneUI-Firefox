@@ -11,12 +11,12 @@
 }
 
 #PersonalToolbar:not([customizing]) {
-  margin-bottom: calc(0px - var(--dtui-ui-bookmarks-inner-height) - 2 * var(--bookmark-block-padding));
+  margin-bottom: calc(0px - var(--dtui-bookmarks-inner-height) - 2 * var(--bookmark-block-padding));
   background-color: inherit !important;
   transform-origin: top;
   transform: rotateX(90deg);
-  transition: transform var(--dtui-ui-bookmarks-animation-speed) ease-out var(--dtui-ui-bookmarks-hover-debounce),
-              opacity var(--dtui-ui-bookmarks-animation-speed) ease-out var(--dtui-ui-bookmarks-hover-debounce);
+  transition: transform var(--dtui-bookmarks-animation-speed) ease-out var(--dtui-bookmarks-hover-debounce),
+              opacity var(--dtui-bookmarks-animation-speed) ease-out var(--dtui-bookmarks-hover-debounce);
 }
 #navigator-toolbox:hover #PersonalToolbar { transform: rotateX(0deg); }
 #navigator-toolbox:not(:hover) #PersonalToolbar:not([customizing]) { opacity: 0 !important; }
@@ -24,7 +24,7 @@
 /* Smaller bookmarks overflow button in compact mode */
 :root[uidensity="compact"] #PlacesChevron {
   margin-block: 0px !important;
-  height: var(--dtui-ui-bookmarks-inner-height) !important;
+  height: var(--dtui-bookmarks-inner-height) !important;
 }
 
 /* Shadow for the Bookmarks bar */
