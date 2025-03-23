@@ -2,6 +2,16 @@
 
 ![Preview](assets/preview.gif "Preview")
 
+## Features
+
+* Sidebar autohide with Fullscreen support
+* Support for Sidebery
+* Bookmarks bar autohide
+* Compact UI compatible with Touch density
+* Custom popup & URLbar extend animations
+* Easily themeable by changing color scheme variables
+* Optional addons (e.g. light theme, rounded webcontent corners, home wallpaper with blurred elements)
+
 ## Install
 
 1. Set Firefox theme to `Dark` in: Firefox settings > Extensions & Themes > Themes.
@@ -26,8 +36,8 @@ For Sidebery: Sidebery settings > Help > Reset settings.
     * `chrome/DownToneUI/override_content.css` for changes to `chrome/userContent.css`
     * `chrome/DownToneUI/override_globals.css` for changes to `chrome/_globals.css`
 * Changing the color scheme:
-    * This can be done in `chrome/DownToneUI/_globals.css` by modifying the `--dtui-theme` variables.
-    * **NOTE:** if vertical tabs are used, these changes also have to be applied to: Sidebery settings > Style editor.
+    * This can be done by copying the `--dtui-theme` variables found in `chrome/DownToneUI/_globals.css` and modifying them in `chrome/DownToneUI/override_globals.css` ([example modification](https://github.com/oviung/DownToneUI-Firefox/blob/main/addons/themes/DownToneUI_Light/globals_theme_DownToneUI_Light.css)).
+    * *__NOTE:__* if Sidebery is used, these changes also have to be applied to: Sidebery settings > Style editor.
 * See [addons](addons/) for some modifications of the defaults. The content of these files is intended to be copied as follows:
     * `chrome_` files to `chrome/DownToneUI/override_chrome.css`
     * `content_` files to `chrome/DownToneUI/override_content.css`
@@ -36,7 +46,7 @@ For Sidebery: Sidebery settings > Help > Reset settings.
 
 ## Notes
 
-* To open the sidebar tabs (in case you've gone to History or entered Private Mode): click on the Sidebery extension or use shortcut CTRL+E (shortcut is not working in Windows).
+* *__Sidebery:__* to open the sidebar tabs (in case you've gone to History or entered Private Mode), click on the extension's icon or use shortcut CTRL+E (shortcut is not working in Windows).
 
 ## Credits
 
