@@ -16,8 +16,8 @@
   --dtui-theme-border-width: 2px;
   --dtui-theme-border-radius: 8px;
 
-  --dtui-ui-sidebar-hover-debounce: 0ms;
-  --dtui-ui-sidebar-animation-speed: 300ms;
+  --dtui-sidebar-hover-debounce: 0ms;
+  --dtui-sidebar-animation-speed: 300ms;
 }
 
 #root.root {
@@ -61,6 +61,7 @@
   --toolbar-el-overlay-selected-border: rgb(var(--dtui-theme-accent-color));
   --status-notice: var(--dtui-theme-accent-high-contrast);
 
+  --general-margin: 0px;
   --tabs-lvl-opacity: 0.25;
   --tabs-indent: 12px;
   --ctx-menu-min-width: 170px;
@@ -72,7 +73,7 @@
 }
 
 /* Center favicons (depending on the sidebar collapsed width) */
-.Tab .body { padding-left: 2px; }
+.Tab .body { padding-left: 3px; }
 
 /* Hover transition */
 #root:not(:hover) {
@@ -82,10 +83,10 @@
 }
 .Tab .body:after {
   width: 1px;
-  margin-left: 2px;
+  margin-left: 3px;
 }
 .Tab .title, .body:has(.audio) .fav {
-  transition: opacity var(--dtui-ui-sidebar-animation-speed) linear var(--dtui-ui-sidebar-hover-debounce);
+  transition: opacity var(--dtui-sidebar-animation-speed) linear var(--dtui-sidebar-hover-debounce);
 }
 
 /* Audio indicator */
@@ -95,7 +96,7 @@
     background-color: rgb(var(--dtui-theme-accent-color));
     height: 16px;
     width: 16px;
-    margin: 6px 0px 0px -14px;
+    margin: 6px 0px 0px -13px;
     border-radius: 9999px;
   }
   .fav { margin-left: 28px; }
