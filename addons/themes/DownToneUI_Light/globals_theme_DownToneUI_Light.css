@@ -1,0 +1,15 @@
+/* ============================================================================
+ * Default DownToneUI Light theme
+ * You should also set Firefox's theme to "Light".
+ * If Sidebery is used, these variables should also be modified in Sidebery's
+ * settings.
+ * ========================================================================= */
+
+* {
+  --dtui-theme-color-scheme: light;
+  --dtui-theme-main-color: 250, 250, 250;
+  --dtui-theme-secondary-color: 235, 235, 235;
+  --dtui-theme-accent-color: 159, 185, 223;
+  --dtui-theme-accent-high-contrast: hsl(216, 50.2%, 40%);
+  --dtui-theme-text-color: 40, 40, 40;
+}

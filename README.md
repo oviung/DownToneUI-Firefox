@@ -24,12 +24,14 @@ For Sidebery: Sidebery settings > Help > Reset settings.
 * It's recommended that additions or updates of the default styles to be done in the following files (which should be created by you). This way, your local changes will persist when this repository is updated.
     * `chrome/DownToneUI/override_chrome.css` for changes to `chrome/userChrome.css`
     * `chrome/DownToneUI/override_content.css` for changes to `chrome/userContent.css`
+    * `chrome/DownToneUI/override_globals.css` for changes to `chrome/_globals.css`
 * Changing the color scheme:
     * This can be done in `chrome/DownToneUI/_globals.css` by modifying the `--dtui-theme` variables.
     * **NOTE:** if vertical tabs are used, these changes also have to be applied to: Sidebery settings > Style editor.
 * See [addons](addons/) for some modifications of the defaults. The content of these files is intended to be copied as follows:
     * `chrome_` files to `chrome/DownToneUI/override_chrome.css`
     * `content_` files to `chrome/DownToneUI/override_content.css`
+    * `globals_` files to `chrome/DownToneUI/override_globals.css`
     * `sidbery_` files to Sidebery's Style editor (at the end)
 
 ## Notes

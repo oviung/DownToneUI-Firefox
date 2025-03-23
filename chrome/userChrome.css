@@ -13,4 +13,5 @@
 @import "DownToneUI/compact_UI.css";
 
 /* Your own customizations */
+@import "DownToneUI/override_globals.css";
 @import "DownToneUI/override_chrome.css";

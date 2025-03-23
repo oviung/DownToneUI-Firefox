@@ -8,4 +8,5 @@
 @import "DownToneUI/theme_scrollbar.css";
 
 /* Your own customizations */
+@import "DownToneUI/override_globals.css";
 @import "DownToneUI/override_content.css";
