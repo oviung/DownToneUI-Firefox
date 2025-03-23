@@ -1,26 +1,71 @@
 /* ============================================================================
- * Hide tab bar (with window controls in navbar) + Sidebar autohide
+ * Sidebar autohide
  * ========================================================================= */
 
+#sidebar-button { display: none !important; }
 #sidebar-main { -moz-window-dragging: drag !important; }
+#main-window[inFullscreen="true"] { #sidebar-main, #sidebar-box { --dtui-sidebar-collapsed-width: 0.01px; }}
 
+@media (-moz-bool-pref:"sidebar.verticalTabs"), -moz-pref("sidebar.verticalTabs") {
+  #sidebar-launcher-splitter, #tabs-newtab-button .toolbarbutton-text,
+  #tabbrowser-tabs:not([expanded]) .tab-close-button, button-group {
+    display: none !important;
+  }
+  .tab-background, #tabs-newtab-button { margin: 0px !important; }
+  .tabbrowser-tab, #sidebar-box { padding: 0px !important; }
+  .tab-content {
+    padding-left: 9px !important;
+    padding-right: 9px !important;
+  }
+  #tabbrowser-tabs:not([expanded]) .tab-label-container {
+    display: flex !important;
+    margin-left: 7.5px !important;
+  }
+
+  #sidebar-main {
+    background-color: rgb(var(--dtui-theme-main-color)) !important;
+    min-width: var(--dtui-sidebar-collapsed-width) !important;
+    max-width: var(--dtui-sidebar-collapsed-width) !important;
+    transition: min-width var(--dtui-sidebar-animation-speed) ease-out var(--dtui-sidebar-hover-debounce),
+                margin var(--dtui-sidebar-animation-speed) ease-out var(--dtui-sidebar-hover-debounce);
+    .tab-background, #vertical-tabs, #tabs-newtab-button {
+      width: var(--dtui-sidebar-collapsed-width) !important;
+      transition: width var(--dtui-sidebar-animation-speed) ease-out var(--dtui-sidebar-hover-debounce);
+    }
+    .tab-icon-stack[soundplaying] .tab-icon-image, .tab-icon-stack[muted] .tab-icon-image,
+    .tab-icon-stack[activemedia-blocked] .tab-icon-image, .tab-label-container {
+      opacity: 0 !important;
+      transition: opacity var(--dtui-sidebar-animation-speed) linear var(--dtui-sidebar-hover-debounce);
+    }
+  }
+  #sidebar-main:hover {
+    min-width: var(--dtui-sidebar-extended-width) !important;
+    @media (-moz-bool-pref:"sidebar.position_start"), -moz-pref("sidebar.position_start") {
+      margin-right: calc(0px - var(--dtui-sidebar-extended-width) + var(--dtui-sidebar-collapsed-width)) !important;
+    }
+    @media not (-moz-bool-pref:"sidebar.position_start"), not -moz-pref("sidebar.position_start") {
+      margin-left: calc(0px - var(--dtui-sidebar-extended-width) + var(--dtui-sidebar-collapsed-width)) !important;
+    }
+    .tab-background, #vertical-tabs, #tabs-newtab-button {
+      width: var(--dtui-sidebar-extended-width) !important;
+    }
+    .tab-icon-stack[soundplaying] .tab-icon-image, .tab-icon-stack[muted] .tab-icon-image,
+    .tab-icon-stack[activemedia-blocked] .tab-icon-image, .tab-label-container {
+      opacity: 1 !important;
+    }
+  }
+}
+
+/* Vertical tabs with Sidebery */
 @media not (-moz-bool-pref:"sidebar.revamp"), not -moz-pref("sidebar.revamp") {
   #TabsToolbar { visibility: collapse !important; }
   #nav-bar .titlebar-buttonbox-container { display: flex !important; }
-
-  /* Align History items favicons with the tabs */
-  #historyTree { margin-left: -15px !important; }
-
   #sidebar-header, #sidebar-splitter { display: none !important; }
+  #historyTree { margin-left: -15px !important; } /* Align History items favicons with the tabs */
 
   #sidebar-box {
     min-width: var(--dtui-sidebar-collapsed-width) !important;
     max-width: var(--dtui-sidebar-collapsed-width) !important;
-    z-index: 3 !important;
-  }
-  #main-window[inFullscreen="true"] #sidebar-box {
-    min-width: 0.01px !important;
-    max-width: 0.01px !important;
   }
   #sidebar-box:hover, #sidebar-box[sidebarcommand="viewBookmarksSidebar"], #sidebar-box[sidebarcommand="viewHistorySidebar"] {
     #sidebar { min-width: var(--dtui-sidebar-extended-width) !important; }

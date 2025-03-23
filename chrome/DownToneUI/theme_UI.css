@@ -123,7 +123,7 @@
 
 /* Shadows */
 slot:not(.nested), findbar, .menupopup-arrowscrollbox, .dialogBox, #customization-footer, .panel-arrowcontent,
-#urlbar[breakout-extend], #statuspanel-label, #sidebar, #sidebar-header, #navigator-toolbox {
+#urlbar[breakout-extend], #statuspanel-label, #sidebar, #sidebar-main, #sidebar-header, #navigator-toolbox {
   --panel-shadow-margin: var(--dtui-theme-shadow-margin) !important;
   box-shadow: var(--dtui-theme-shadow) !important;
 }
@@ -134,8 +134,9 @@ slot:not(.nested), findbar, .menupopup-arrowscrollbox, .dialogBox, #customizatio
 }
 #urlbar-background { box-shadow: none !important; }
 #navigator-toolbox { --browser-area-z-index-toolbox: 4 !important; }
-#sidebar-box, #sidebar-header { z-index: 3 !important; }
-findbar { z-index: 1 !important; }
+#sidebar-main { z-index: 3 !important; }
+#sidebar-box, #sidebar-header { z-index: 2 !important; }
+findbar, #tabbrowser-tabbox { z-index: 1 !important; }
 
 /* Borders */
 #statuspanel-label, search-textbox#search-box, button#viewButton, tooltip {
@@ -160,16 +161,46 @@ findbar, #navigator-toolbox, #urlbar-input, input[inputmode="search"], moz-card 
 .tab-background[selected] {
   border: var(--dtui-theme-border-width) solid rgb(var(--dtui-theme-accent-color)) !important;
 }
+.tab-audio-button {
+  --button-size-icon-small: 16px !important;
+  --button-min-height-small: 16px !important;
+  margin-right: 6px !important;
+  padding-left: 4px !important;
+}
+button[aria-label="Mute tab"], button[aria-label="Unmute tab"], button[aria-label="Play tab"] {
+  .button-background {
+    background-color: rgb(var(--dtui-theme-accent-color)) !important;
+    border-radius: 9999px !important;
+  }
+}
+.tab-icon-stack[soundplaying], .tab-icon-stack[muted], .tab-icon-stack[activemedia-blocked] {
+  margin-right: 4px !important;
+}
+@media (-moz-bool-pref:"sidebar.verticalTabs"), -moz-pref("sidebar.verticalTabs") {
+  .tabbrowser-tab .tab-icon-overlay {
+    background-image: linear-gradient(rgb(var(--dtui-theme-accent-color))) !important;
+    top: 0px !important;
+    left: 0px !important;
+  }
+  #tabbrowser-tabs:not([expanded]) {
+    .tab-icon-stack[soundplaying], .tab-icon-stack[muted], .tab-icon-stack[activemedia-blocked] {
+      .tab-icon-image { margin: 0px -1.5px 0px 22px !important; }
+    }
+  }
+  #tabbrowser-tabs[expanded] {
+    .tab-audio-button[soundplaying], .tab-audio-button[muted], .tab-audio-button[activemedia-blocked] {
+      display: flex !important;
+      order: -1 !important;
+      margin-left: -4px !important;
+    }
+  }
+}
 @media not (-moz-bool-pref:"sidebar.verticalTabs"), not -moz-pref("sidebar.verticalTabs") {
   .tab-audio-button[soundplaying], .tab-audio-button[muted], .tab-audio-button[activemedia-blocked] {
     display: flex !important;
     order: -1 !important;
     margin-left: -4px !important;
   }
-  .tab-icon-stack[soundplaying], .tab-icon-stack[muted], .tab-icon-stack[activemedia-blocked] {
-    margin-right: 4px !important;
-  }
-  .button-background { border-radius: 9999px !important; }
 }
 
 /* Specific elements styling */
