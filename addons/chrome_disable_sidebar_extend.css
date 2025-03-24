@@ -6,18 +6,16 @@
   --dtui-sidebar-extended-width: var(--dtui-sidebar-no-extend-width);
   --dtui-sidebar-animation-speed: 0ms;
 }
-
-#sidebar-main:hover {
+#sidebar-main:hover { .tab-label-container { opacity: 0 !important; }}
+#sidebar-main:hover .tabbrowser-tab:not(:hover) {
   .tab-icon-stack[soundplaying], .tab-icon-stack[muted], .tab-icon-stack[activemedia-blocked] {
     .tab-icon-image { opacity: 0 !important; }
   }
 }
 #sidebar-main .tabbrowser-tab:hover {
-  .tab-icon-overlay { display: none !important; }
+  .tab-icon-overlay, .tab-audio-button { display: none !important; }
   .tab-icon-stack[soundplaying], .tab-icon-stack[muted], .tab-icon-stack[activemedia-blocked] {
-    .tab-icon-image {
-      margin-left: 0px !important;
+      margin-left: -22px !important;
       opacity: 1 !important;
-    }
   }
 }

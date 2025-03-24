@@ -17,10 +17,19 @@
     padding-left: 9px !important;
     padding-right: 9px !important;
   }
-  #tabbrowser-tabs:not([expanded]) .tab-label-container {
+  #tabbrowser-tabs:not([expanded]) .tab-label-container,
+  #vertical-pinned-tabs-container .tab-label-container {
     display: flex !important;
     margin-left: 7.5px !important;
   }
+  #vertical-pinned-tabs-container tab {
+    box-sizing: border-box !important;
+    display: flex !important;
+    grid-column-start: 1 !important;
+  }
+  #vertical-pinned-tabs-container:not(:empty) + #vertical-pinned-tabs-container-separator { display: block !important; }
+  #vertical-pinned-tabs-container-separator { margin: 0px !important; }
+  #vertical-pinned-tabs-container { padding: 0px !important; }
 
   #sidebar-main {
     background-color: rgb(var(--dtui-theme-main-color)) !important;
