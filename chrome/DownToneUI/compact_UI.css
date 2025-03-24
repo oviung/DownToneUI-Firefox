@@ -8,6 +8,19 @@
 * { --urlbar-container-height: var(--urlbar-min-height) !important; }
 #nav-bar { max-height: var(--urlbar-min-height) !important; }
 
+/* Horizontal tabs */
+:root[uidensity="compact"] {
+  @media not (-moz-bool-pref:"sidebar.verticalTabs"), not -moz-pref("sidebar.verticalTabs") {
+    * { --tab-min-height: var(--urlbar-min-height) !important; }
+    #tabbrowser-tabs, #tabbrowser-tabs > #tabbrowser-arrowscrollbox, .tabbrowser-tabs .tabbrowser-tab {
+      min-height: var(--tab-min-height) !important;
+      max-height: var(--tab-min-height) !important;
+    }
+    .tabbrowser-tab, #tabs-newtab-button { padding: 0px !important; }
+    .tab-background { margin: 0px !important; }
+  }
+}
+
 /* Remove spaces around navbar buttons */
 .toolbarbutton-1:not(#tabs-newtab-button), .chromeclass-toolbar-additional:not(#urlbar-searchmode-switcher) {
   padding: 0px !important;
