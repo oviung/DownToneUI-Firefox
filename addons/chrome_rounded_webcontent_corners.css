@@ -12,3 +12,4 @@
   z-index: 1 !important;
 }
 #tabbrowser-tabbox { margin: 8px 6px 6px 8px !important; }
+#main-window[inFullscreen="true"] #tabbrowser-tabbox { margin: 6px !important; }
