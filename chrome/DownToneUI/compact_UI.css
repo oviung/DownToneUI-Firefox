@@ -8,6 +8,9 @@
 * { --urlbar-container-height: var(--urlbar-min-height) !important; }
 #nav-bar { max-height: var(--urlbar-min-height) !important; }
 
+/* Workaround for shifting URLbar on window popup */
+#window-modal-dialog[open] ~ #navigator-toolbox #urlbar-container { margin-top: -4px !important; }
+
 /* Horizontal tabs */
 :root[uidensity="compact"] {
   @media not (-moz-bool-pref:"sidebar.verticalTabs"), not -moz-pref("sidebar.verticalTabs") {
