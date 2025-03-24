@@ -4,7 +4,7 @@
 
 #sidebar-button { display: none !important; }
 #sidebar-main { -moz-window-dragging: drag !important; }
-#main-window[inFullscreen="true"] { #sidebar-main, #sidebar-box { --dtui-sidebar-collapsed-width: 0.01px; }}
+#main-window[inFullscreen="true"] * { --dtui-sidebar-collapsed-width: 0.01px; }
 
 @media (-moz-bool-pref:"sidebar.verticalTabs"), -moz-pref("sidebar.verticalTabs") {
   #sidebar-launcher-splitter, #tabs-newtab-button .toolbarbutton-text,

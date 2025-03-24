@@ -33,6 +33,7 @@
   --dtui-theme-shadow: 0px 0px var(--dtui-theme-shadow-margin) hsla(0, 0%, 0%, 0.4);
 
   --dtui-sidebar-collapsed-width: 34px;
+  --dtui-sidebar-no-extend-width: 34px; /* Set to the same value as "--dtui-sidebar-collapsed-width" */
   --dtui-sidebar-extended-width: 270px;
   --dtui-bookmarks-hover-debounce: 200ms;
   --dtui-bookmarks-animation-speed: 200ms;
