@@ -1,7 +1,9 @@
 /* ============================================================================
- * Hide favicon when audio is playing (for horizontal tabs)
+ * Hide favicon when audio is playing (for native tabs)
  * ========================================================================= */
 
 .tabbrowser-tab[soundplaying], .tabbrowser-tab[muted], .tabbrowser-tab[activemedia-blocked] {
   .tab-icon-image { display: none !important; }
 }
+.tab-audio-button { margin-right: 1.5px !important; }
+#sidebar-main { .tab-audio-button, .tab-icon-overlay { margin-right: 3.5px !important; }}

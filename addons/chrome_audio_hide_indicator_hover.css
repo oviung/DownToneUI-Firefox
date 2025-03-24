@@ -2,28 +2,9 @@
  * Hide audio indicator on tab hover
  * ========================================================================= */
 
-.tabbrowser-tab:hover {
-  .tab-icon-overlay, .tab-audio-button {
-    display: none !important;
-  }
-  .tab-icon-stack[soundplaying], .tab-icon-stack[muted] {
+#tabbrowser-tabs .tabbrowser-tab:hover {
+  .tab-icon-overlay, .tab-audio-button { display: none !important; }
+  .tab-icon-stack[soundplaying], .tab-icon-stack[muted], .tab-icon-stack[activemedia-blocked] {
     margin-right: 3.5px !important;
-  }
-  @media (-moz-bool-pref:"sidebar.verticalTabs") {
-    .tab-icon-stack[soundplaying], .tab-icon-stack[muted] {
-      margin-right: 5.5px !important;
-    }
-  }
-}
-
-.tab-icon-overlay[activemedia-blocked], .tab-audio-button[activemedia-blocked] {
-  display: none !important;
-}
-.tab-icon-stack[activemedia-blocked] {
-  margin-right: 3.5px !important;
-}
-@media (-moz-bool-pref:"sidebar.verticalTabs") {
-  .tab-icon-stack[activemedia-blocked] {
-    margin-right: 5.5px !important;
   }
 }
