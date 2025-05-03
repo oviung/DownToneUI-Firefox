@@ -15,7 +15,9 @@
 ## Install
 
 1. Set Firefox theme to `Dark` in: Firefox settings > Extensions & Themes > Themes.
-2. Go to `about:config` (in the URL bar) and set `toolkit.legacyUserProfileCustomizations.stylesheets = true`.
+2. Go to `about:config` (in the URL bar) and set:<br>
+    `toolkit.legacyUserProfileCustomizations.stylesheets = true`<br>
+    `widget.windows.mica.popups = 0`
 3. Go to `about:support` > Search for "Profile Directory" > Open > Copy the "chrome" folder to this location.
 4. Restart Firefox.
 5. *(Optional)* Vertical tabs using Sidebery:
@@ -43,6 +45,11 @@ For Sidebery: Sidebery settings > Help > Reset settings.
     * `content_` files to `chrome/DownToneUI/override_content.css`
     * `globals_` files to `chrome/DownToneUI/override_globals.css`
     * `sidbery_` files to Sidebery's Style editor (at the end)
+
+## Additional recommended settings:
+
+`browser.compactmode.show = true`<br>
+`browser.uidensity = 1`    *--> Compact*
 
 ## Notes
 
