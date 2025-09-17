@@ -37,7 +37,7 @@ url-prefix("about:welcome"),   url-prefix("chrome:") {{}
     --button-text-color: rgb(var(--dtui-theme-text-color)) !important;
     --border-color-deemphasized: var(--dtui-theme-border-color) !important;
     --border-color-interactive: rgba(var(--dtui-theme-text-color), var(--dtui-theme-text-mid-alpha)) !important;
-    --background-color-canvas: rgb(var(--dtui-theme-text-color)) !important;
+    --background-color-canvas: rgb(var(--dtui-theme-main-color)) !important;
     --background-color-box: rgb(var(--dtui-theme-secondary-color)) !important;
     --toolbar-field-background-color: rgb(var(--dtui-theme-secondary-color)) !important;
     --toolbar-field-color: rgb(var(--dtui-theme-text-color)) !important;
