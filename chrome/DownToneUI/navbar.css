@@ -15,7 +15,7 @@
 /* URLbar extend animation */
 #urlbar[breakout-extend] {
   transform-origin: top;
-  animation: urlbar-animation var(--dtui-urlbar-animation-speed) ease-out;
+  animation: urlbar-animation var(--dtui-urlbar-animation-speed) ease-out !important;
 }
 @keyframes urlbar-animation {
   0% { transform: scaleY(0.95); }

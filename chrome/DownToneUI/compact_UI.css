@@ -8,6 +8,9 @@
 * { --urlbar-container-height: var(--urlbar-min-height) !important; }
 #nav-bar { max-height: var(--urlbar-min-height) !important; }
 
+/* WebApps URLbar offset */
+#main-window[taskbartab] #urlbar-container { margin-top: -5px !important; }
+
 /* Workaround for shifting URLbar on window popup */
 #window-modal-dialog[open] ~ #navigator-toolbox #urlbar-container { margin-top: -4px !important; }
 
@@ -41,6 +44,9 @@ findbar { padding: 0px !important; }
 .findbar-closebutton { margin: 0px !important; }
 
 /* Window controls */
+@media (-moz-platform: linux) {
+  .titlebar-button { padding: 2px !important; }
+}
 @media (-moz-platform: windows) {
   .titlebar-button { padding: 10px !important; }
   :root[uidensity="compact"] .titlebar-button { padding: 8px !important; }

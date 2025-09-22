@@ -88,6 +88,8 @@
   --tab-border-radius: var(--dtui-theme-border-radius) !important;
   --tabs-navbar-separator-color: rgba(0, 0, 0, 0) !important;
   --urlbar-box-bgcolor: rgb(var(--dtui-theme-secondary-color)) !important;
+  --urlbar-box-hover-bgcolor: rgba(var(--dtui-theme-accent-color), var(--dtui-theme-accent-low-alpha)) !important;
+  --urlbar-box-focus-bgcolor: rgba(var(--dtui-theme-accent-color), var(--dtui-theme-accent-low-alpha)) !important;
   --urlbarView-highlight-background: rgba(var(--dtui-theme-accent-color), var(--dtui-theme-accent-low-alpha)) !important;
   --urlbarView-highlight-color: rgb(var(--dtui-theme-text-color)) !important;
   --urlbarView-action-color: rgba(var(--dtui-theme-text-color), var(--dtui-theme-text-mid-alpha)) !important;
@@ -139,19 +141,19 @@ slot:not(.nested), findbar, .menupopup-arrowscrollbox, .dialogBox, #customizatio
 findbar, #tabbrowser-tabbox { z-index: 1 !important; }
 
 /* Borders */
-#statuspanel-label, search-textbox#search-box, button#viewButton, tooltip {
+#statuspanel-label, input, button#viewButton, tooltip {
   border: var(--dtui-theme-border-width) solid var(--dtui-theme-border-color) !important;
 }
 button, menuitem, input, #urlbar[breakout-extend], #statuspanel-label, tooltip, richlistitem.autocomplete-richlistitem,
-search-textbox#search-box, button#viewButton {
+button#viewButton {
   border-radius: var(--dtui-theme-border-radius) !important;
-}
-search-textbox#search-box:focus, .search-container input:focus {
-  outline: var(--dtui-theme-border-width) solid rgba(var(--dtui-theme-accent-color), var(--dtui-theme-accent-low-alpha)) !important;
 }
 findbar, #navigator-toolbox, #urlbar-input, input[inputmode="search"], moz-card {
   border: none !important;
   border-radius: 0px !important;
+}
+input[type="search"]:focus {
+  outline: var(--dtui-theme-border-width) solid rgba(var(--dtui-theme-accent-color), var(--dtui-theme-accent-low-alpha)) !important;
 }
 
 /* Tab events */
@@ -204,11 +206,11 @@ menuitem:hover, menuitem:where([_moz-menuactive]:not([disabled])), menu:where([_
 #moz-card-details, .tabbrowser-tab:not(:hover):not([selected], [multiselected]) .tab-background {
   background-color: rgb(var(--dtui-theme-main-color)) !important;
 }
-search-textbox#search-box, #moz-toggle-button[aria-pressed="false"], #statuspanel-label,
-tooltip, richlistitem.autocomplete-richlistitem {
+input, #moz-toggle-button[aria-pressed="false"], #statuspanel-label, tooltip,
+richlistitem.autocomplete-richlistitem {
   background-color: rgb(var(--dtui-theme-secondary-color)) !important;
 }
-.sidebar-panel, .urlbarView-row:hover .urlbarView-url {
+tooltip, .sidebar-panel, .urlbarView-row:hover .urlbarView-url {
   color: rgb(var(--dtui-theme-text-color)) !important;
 }
 button#viewButton {
@@ -223,9 +225,9 @@ button#viewButton[open], #notification-popup-box[open] {
 #stop-button:not([disabled]) {
   fill: var(--dtui-theme-accent-high-contrast) !important;
 }
-tooltip, #statuspanel-label, #downloads-button, #vertical-pinned-tabs-container-separator {
+#statuspanel-label, #downloads-button, #vertical-pinned-tabs-container-separator {
   color: var(--dtui-theme-accent-high-contrast) !important;
 }
 .autoscroller { opacity: 0 !important; }
 #statuspanel { margin: 10px !important; }
-search-textbox#search-box, button#viewButton, tooltip { appearance: none !important; }
+button#viewButton, tooltip { appearance: none !important; }

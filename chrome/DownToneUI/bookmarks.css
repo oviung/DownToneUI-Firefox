@@ -16,7 +16,7 @@
   transform-origin: top;
   transform: rotateX(90deg);
   transition: transform var(--dtui-bookmarks-animation-speed) ease-out var(--dtui-bookmarks-hover-debounce),
-              opacity var(--dtui-bookmarks-animation-speed) ease-out var(--dtui-bookmarks-hover-debounce);
+              opacity var(--dtui-bookmarks-animation-speed) ease-out var(--dtui-bookmarks-hover-debounce) !important;
 }
 #navigator-toolbox:hover #PersonalToolbar { transform: rotateX(0deg); }
 #navigator-toolbox:not(:hover) #PersonalToolbar:not([customizing]) { opacity: 0 !important; }

@@ -24,7 +24,7 @@ url-prefix("about:welcome"),   url-prefix("chrome:") {{}
     --focus-outline-color: rgba(var(--dtui-theme-accent-color), var(--dtui-theme-accent-low-alpha)) !important;
     --focus-outline-width: var(--dtui-theme-border-width) !important;
     --newtab-background-color: rgb(var(--dtui-theme-main-color)) !important;
-    --newtab-background-color-secondary: rgb(var(--dtui-theme-secondary-color)) !important;;
+    --newtab-background-color-secondary: rgb(var(--dtui-theme-secondary-color)) !important;
     --newtab-text-primary-color: rgb(var(--dtui-theme-text-color)) !important;
     --color-accent-primary: rgb(var(--dtui-theme-accent-color)) !important;
     --color-accent-primary-hover: rgba(var(--dtui-theme-accent-color), var(--dtui-theme-accent-mid-alpha)) !important;
@@ -88,13 +88,14 @@ url-prefix("about:welcome"),   url-prefix("chrome:") {{}
     --newtab-textbox-focus-color: rgba(var(--dtui-theme-accent-color), var(--dtui-theme-accent-low-alpha)) !important;
     --newtab-textbox-focus-boxshadow: 0 0 0 0px var(--newtab-primary-action-background), 0 0 0 4px rgba(var(--newtab-primary-action-background), 0.0) !important;
     --newtab-border-color: var(--dtui-theme-border-color) !important;
-    --newtab-weather-background-coolr: rgb(var(--dtui-theme-main-color)) !important;
+    --newtab-weather-background-color: rgb(var(--dtui-theme-main-color)) !important;
     --in-content-text-color: rgb(var(--dtui-theme-text-color)) !important;
     --in-content-box-background-odd: rgb(var(--dtui-theme-main-color)) !important;
     --in-content-box-info-background: rgb(var(--dtui-theme-secondary-color)) !important;
     --in-content-table-header-background: rgba(var(--dtui-theme-accent-color), var(--dtui-theme-accent-low-alpha)) !important;
     --in-content-table-border-color: var(--dtui-theme-border-color) !important;
     --in-content-border-color: var(--dtui-theme-separator-color) !important;
+    --input-text-background-color: rgb(var(--dtui-theme-secondary-color)) !important;
     --table-row-background-color: rgb(var(--dtui-theme-main-color)) !important;
     --table-row-background-color-alternate: rgb(var(--dtui-theme-secondary-color)) !important;
     --card-outline-color: rgb(var(--dtui-theme-secondary-color)) !important;
@@ -111,21 +112,21 @@ url-prefix("about:welcome"),   url-prefix("chrome:") {{}
   button.cancel, button.done { box-shadow: none !important; }
 
   /* Borders */
-  body[dir="ltr"], input, login-list.initialized, .close-button, .dialogTitleBar, .fieldpair,
+  input, login-list.initialized, .close-button, .card, .dialogTitleBar, .fieldpair,
   .connect-section__extra, .debug-target-item__additional_actions, button.done {
     border-color: var(--dtui-theme-border-color) !important;
   }
-  .default-input:focus, input[type="text"]:focus {
+  .default-input:focus, input[type="search"]:focus {
     outline: var(--focus-outline-width) solid var(--focus-outline-color) !important;
   }
-  button, panel-list, richlistitem, menulist, menuitem, arrowscrollbox, input, search-textbox, select, a,
+  button, panel-list, richlistitem, menulist, menuitem, arrowscrollbox, input, select, a,
   .default-input, .card, .sidebar * {
     border-radius: var(--dtui-theme-border-radius) !important;
   }
   .tab-button[selected] { border-top-color: rgb(var(--dtui-theme-accent-color)) !important; }
 
   /* Specific elements styling */
-  body[dir="ltr"], login-list.initialized, .category-subsection, .meta.text-deemphasized, .app, .customize-menu,
+  login-list.initialized, .category-subsection, .meta.text-deemphasized, .app, .customize-menu,
   .close-button-wrapper, #migrationWizardDialog, .topsite-form {
     background-color: rgb(var(--dtui-theme-main-color)) !important;
   }
@@ -137,7 +138,8 @@ url-prefix("about:welcome"),   url-prefix("chrome:") {{}
   .qa-sidebar-item, .search-inner-wrapper * {
     color: rgb(var(--dtui-theme-text-color)) !important;
   }
-  .primary-button, .close-button, .selector, button.cancel, button.done {
+  .primary-button, .close-button, .selector, button.cancel, button.done, .top-site-outer:hover,
+  .weatherInfoLink:hover, .weatherButtonContextMenuWrapper:hover {
     background-color: rgba(var(--dtui-theme-accent-color), var(--dtui-theme-accent-low-alpha)) !important;
   }
   .default-button:hover, .primary-button:hover, .close-button:hover, button.cancel:hover, button.done:hover  {
@@ -146,7 +148,7 @@ url-prefix("about:welcome"),   url-prefix("chrome:") {{}
   .default-button:active, .primary-button:active, .close-button:active, button.cancel:active, button.done:active {
     background-color: rgb(var(--dtui-theme-accent-color)) !important;
   }
-  body[dir="ltr"] a, .enable-custom-image-input {
+  a[target], .enable-custom-image-input {
     color: var(--dtui-theme-accent-high-contrast) !important;
   }
 
