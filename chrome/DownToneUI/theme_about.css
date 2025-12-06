@@ -89,6 +89,9 @@ url-prefix("about:welcome"),   url-prefix("chrome:") {{}
     --newtab-textbox-focus-boxshadow: 0 0 0 0px var(--newtab-primary-action-background), 0 0 0 4px rgba(var(--newtab-primary-action-background), 0.0) !important;
     --newtab-border-color: var(--dtui-theme-border-color) !important;
     --newtab-weather-background-color: rgb(var(--dtui-theme-main-color)) !important;
+    --promo-background-color: rgb(var(--dtui-theme-secondary-color)) !important;
+    --promo-border: var(--dtui-theme-border-width) solid var(--dtui-theme-border-color) !important;
+    --promo-border-radius: var(--dtui-theme-border-radius) !important;
     --in-content-text-color: rgb(var(--dtui-theme-text-color)) !important;
     --in-content-box-background-odd: rgb(var(--dtui-theme-main-color)) !important;
     --in-content-box-info-background: rgb(var(--dtui-theme-secondary-color)) !important;
@@ -96,6 +99,8 @@ url-prefix("about:welcome"),   url-prefix("chrome:") {{}
     --in-content-table-border-color: var(--dtui-theme-border-color) !important;
     --in-content-border-color: var(--dtui-theme-separator-color) !important;
     --input-text-background-color: rgb(var(--dtui-theme-secondary-color)) !important;
+    --background-color-box-info: rgb(var(--dtui-theme-secondary-color)) !important;
+    --box-border-radius-inner: calc(var(--dtui-theme-border-radius) - var(--dtui-theme-border-width)) !important;
     --table-row-background-color: rgb(var(--dtui-theme-main-color)) !important;
     --table-row-background-color-alternate: rgb(var(--dtui-theme-secondary-color)) !important;
     --card-outline-color: rgb(var(--dtui-theme-secondary-color)) !important;
@@ -112,17 +117,19 @@ url-prefix("about:welcome"),   url-prefix("chrome:") {{}
   button.cancel, button.done { box-shadow: none !important; }
 
   /* Borders */
-  input, login-list.initialized, .close-button, .card, .dialogTitleBar, .fieldpair,
+  input, moz-box-item, moz-box-link, login-list.initialized, .close-button, .card, .dialogTitleBar, .fieldpair,
   .connect-section__extra, .debug-target-item__additional_actions, button.done {
     border-color: var(--dtui-theme-border-color) !important;
   }
   .default-input:focus, input[type="search"]:focus {
     outline: var(--focus-outline-width) solid var(--focus-outline-color) !important;
   }
-  button, panel-list, richlistitem, menulist, menuitem, arrowscrollbox, input, select, a,
+  button, moz-box-button, moz-box-item, moz-box-link, panel-list, richlistitem, menulist, menuitem, arrowscrollbox, input, select, a,
   .default-input, .card, .sidebar * {
     border-radius: var(--dtui-theme-border-radius) !important;
   }
+  moz-box-button { border: var(--dtui-theme-border-width) solid rgba(var(--dtui-theme-accent-color), var(--dtui-theme-accent-mid-alpha)) !important; }
+  .button { border-radius: calc(var(--dtui-theme-border-radius) - var(--dtui-theme-border-width)) !important; }
   .tab-button[selected] { border-top-color: rgb(var(--dtui-theme-accent-color)) !important; }
 
   /* Specific elements styling */
@@ -130,11 +137,11 @@ url-prefix("about:welcome"),   url-prefix("chrome:") {{}
   .close-button-wrapper, #migrationWizardDialog, .topsite-form {
     background-color: rgb(var(--dtui-theme-main-color)) !important;
   }
-  .default-input, .card, .privacy-detailedoption, .qr-code-box, .list-item.selected,
+  moz-box-button, moz-box-item, moz-box-link, .default-input, .card, .privacy-detailedoption, .qr-code-box, .list-item.selected,
   #moz-toggle-button[aria-pressed="false"] {
     background-color: rgb(var(--dtui-theme-secondary-color)) !important;
   }
-  .category, button.category, button[role="tab"], .tab-button, .primary-button,
+  .category, button.category, button[role="tab"], .tab-button, .tab-text, .primary-button,
   .qa-sidebar-item, .search-inner-wrapper * {
     color: rgb(var(--dtui-theme-text-color)) !important;
   }

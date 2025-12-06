@@ -225,6 +225,9 @@ button#viewButton[open], #notification-popup-box[open] {
 #stop-button:not([disabled]) {
   fill: var(--dtui-theme-accent-high-contrast) !important;
 }
+.urlbar-revert-button {
+  fill: rgb(var(--dtui-theme-text-color)) !important;
+}
 #statuspanel-label, #downloads-button, #vertical-pinned-tabs-container-separator {
   color: var(--dtui-theme-accent-high-contrast) !important;
 }
