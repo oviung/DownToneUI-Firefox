@@ -4,16 +4,6 @@
  *   browser.uidensity = 1    --> Compact
  * ========================================================================= */
 
-/* Remove top & bottom margins from urlbar */
-* { --urlbar-container-height: var(--urlbar-min-height) !important; }
-#nav-bar { max-height: var(--urlbar-min-height) !important; }
-
-/* WebApps URLbar offset */
-#main-window[taskbartab] #urlbar-container { margin-top: -5px !important; }
-
-/* Workaround for shifting URLbar on window popup */
-#window-modal-dialog[open] ~ #navigator-toolbox #urlbar-container { margin-top: -4px !important; }
-
 /* Horizontal tabs */
 :root[uidensity="compact"] {
   @media not (-moz-bool-pref:"sidebar.verticalTabs"), not -moz-pref("sidebar.verticalTabs") {
