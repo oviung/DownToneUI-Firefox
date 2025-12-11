@@ -202,7 +202,7 @@ menuitem:hover, menuitem:where([_moz-menuactive]:not([disabled])), menu:where([_
   background-color: rgba(var(--dtui-theme-accent-color), var(--dtui-theme-accent-mid-alpha)) !important;
   color: rgb(var(--dtui-theme-text-color)) !important;
 }
-.sidebar-panel, #password-notification, #report-broken-site-popup-mainView, fieldset #inputs,
+.sidebar-panel, #PersonalToolbar, #password-notification, #report-broken-site-popup-mainView, fieldset #inputs,
 #moz-card-details, .tabbrowser-tab:not(:hover):not([selected], [multiselected]) .tab-background {
   background-color: rgb(var(--dtui-theme-main-color)) !important;
 }

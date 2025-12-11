@@ -12,7 +12,6 @@
 
 #PersonalToolbar:not([customizing]) {
   margin-bottom: calc(0px - var(--dtui-bookmarks-inner-height) - 2 * var(--bookmark-block-padding));
-  background-color: inherit !important;
   transform-origin: top;
   transform: rotateX(90deg);
   transition: transform var(--dtui-bookmarks-animation-speed) ease-out var(--dtui-bookmarks-hover-debounce),
