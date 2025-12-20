@@ -68,8 +68,9 @@
 /* Vertical tabs with Sidebery */
 @media not (-moz-bool-pref:"sidebar.revamp"), not -moz-pref("sidebar.revamp") {
   #TabsToolbar { visibility: collapse !important; }
-  #nav-bar .titlebar-buttonbox-container { display: flex !important; }
   #sidebar-header, #sidebar-splitter { display: none !important; }
+  #nav-bar .titlebar-buttonbox-container { display: flex !important; }
+  #toolbar-menubar:not([inactive]) ~ #nav-bar .titlebar-buttonbox-container { display: none !important; }
   #historyTree { margin-left: -15px !important; } /* Align History items favicons with the tabs */
 
   #sidebar-box {
