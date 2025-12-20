@@ -70,6 +70,9 @@
   --toolbar-non-lwt-bgcolor: rgb(var(--dtui-theme-main-color)) !important;
   --toolbox-non-lwt-textcolor: rgb(var(--dtui-theme-text-color)) !important;
   --toolbox-non-lwt-textcolor-inactive: rgb(var(--dtui-theme-text-color)) !important;
+  --toolbox-bgcolor: rgb(var(--dtui-theme-main-color)) !important;
+  --toolbox-bgcolor-inactive: rgb(var(--dtui-theme-main-color)) !important;
+  --toolbox-textcolor: rgb(var(--dtui-theme-text-color)) !important;
   --toolbar-bgcolor: rgb(var(--dtui-theme-main-color)) !important;
   --toolbar-color: rgb(var(--dtui-theme-text-color)) !important;
   --toolbarbutton-border-radius: var(--dtui-theme-border-radius) !important;
@@ -79,6 +82,7 @@
   --toolbarbutton-icon-fill-attention: var(--dtui-theme-accent-high-contrast) !important;
   --toolbarbutton-icon-fill-attention-text: rgb(var(--dtui-theme-text-color)) !important;
   --toolbarseparator-color: var(--dtui-theme-separator-color) !important;
+  --trustpanel-graphic-bg: rgb(var(--dtui-theme-main-color)) !important;
   --tabpanel-background-color: rgb(var(--dtui-theme-main-color)) !important;
   --tab-loading-fill: rgb(var(--dtui-theme-accent-color)) !important;
   --tab-selected-outline-color: rgb(var(--dtui-theme-accent-color)) !important;
