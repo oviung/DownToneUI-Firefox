@@ -1,0 +1,51 @@
+/* ============================================================================
+ * Extended list of menu items to be hidden
+ * ========================================================================= */
+
+/* ===== MAIN MENU ===== */
+
+#appMenu-new-tab-button2,
+#appMenu-new-window-button2,
+#appMenu-new-private-window-button2,
+#appMenu-mainView toolbarseparator:nth-of-type(2),
+#appMenu-print-button2,
+#appMenu-save-file-button2,
+#appMenu-find-button2,
+#appMenu-zoom-controls,
+#appMenu-mainView toolbarseparator:nth-of-type(3) { display: none !important; }
+
+/* ===== CONTEXT MENUS ===== */
+
+/* Extensions */
+#jid0-adyhmvsp91nuo8prv0mn2vkeb84_jetpack-menuitem-_save_page,
+#jid0-adyhmvsp91nuo8prv0mn2vkeb84_jetpack-menuitem-_save_link,
+#jid0-adyhmvsp91nuo8prv0mn2vkeb84_jetpack-menuitem-_save_image,
+#jid0-adyhmvsp91nuo8prv0mn2vkeb84_jetpack-menuitem-_save_video,
+menu[label="Raindrop.io"],
+#ublock0_raymondhill_net-menuitem-_uBlock0-blockElement { display: none !important; }
+
+/* Links */
+#context-previewlink,
+#context-bookmarklink,
+#context-sendlinktodevice,
+#context-sendpagetodevice,
+#context-openlinkinusercontext-menu { display: none !important; }
+
+/* Images */
+#context-visual-search { display: none !important; }
+
+/* Videos */
+#context-media-pause,
+#context-media-mute,
+#context-video-fullscreen,
+#context-media-showcontrols,
+#context-sendvideo { display: none !important; }
+
+/* Text fields */
+#context-undo,
+#context-redo,
+#context-sep-redo { display: none !important; }
+
+/* Others */
+#context-viewsource,
+#context-viewpartialsource-selection { display: none !important; }
