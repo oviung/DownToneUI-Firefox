@@ -3,20 +3,21 @@
  * ========================================================================= */
 
 @-moz-document
-url-prefix("about:about"),     url-prefix("about:addons"),     url-prefix("about:buildconfig"),
-url-prefix("about:cache"),     url-prefix("about:compat"),     url-prefix("about:certificate"),
-url-prefix("about:config"),    url-prefix("about:crashes"),    url-prefix("about:deleteprofile"),
-url-prefix("about:debugging"), url-prefix("about:downloads"),  url-prefix("about:editprofile"),
-url-prefix("about:home"),      url-prefix("about:license"),    url-prefix("about:loginsimportreport"),
-url-prefix("about:logins"),    url-prefix("about:logging"),    url-prefix("about:networking"),
-url-prefix("about:memory"),    url-prefix("about:newprofile"), url-prefix("about:preferences"),
-url-prefix("about:policies"),  url-prefix("about:newtab"),     url-prefix("about:privatebrowsing"),
-url-prefix("about:processes"), url-prefix("about:profiles"),   url-prefix("about:protections"),
-url-prefix("about:profiling"), url-prefix("about:rights"),     url-prefix("about:serviceworkers"),
-url-prefix("about:robots"),    url-prefix("about:studies"),    url-prefix("about:support"),
-url-prefix("about:sync-log"),  url-prefix("about:telemetry"),  url-prefix("about:url-classifier"),
-url-prefix("about:unloads"),   url-prefix("about:webauthn"),   url-prefix("about:webrtc"),
-url-prefix("about:welcome"),   url-prefix("chrome:") {{}
+url-prefix("about:about"),     url-prefix("about:addons"),      url-prefix("about:buildconfig"),
+url-prefix("about:cache"),     url-prefix("about:compat"),      url-prefix("about:certificate"),
+url-prefix("about:config"),    url-prefix("about:crashes"),     url-prefix("about:deleteprofile"),
+url-prefix("about:debugging"), url-prefix("about:downloads"),   url-prefix("about:editprofile"),
+url-prefix("about:home"),      url-prefix("about:license"),     url-prefix("about:loginsimportreport"),
+url-prefix("about:logins"),    url-prefix("about:logging"),     url-prefix("about:networking"),
+url-prefix("about:memory"),    url-prefix("about:newprofile"),  url-prefix("about:preferences"),
+url-prefix("about:policies"),  url-prefix("about:newtab"),      url-prefix("about:privatebrowsing"),
+url-prefix("about:processes"), url-prefix("about:profiles"),    url-prefix("about:protections"),
+url-prefix("about:profiling"), url-prefix("about:keyboard"),    url-prefix("about:serviceworkers"),
+url-prefix("about:robots"),    url-prefix("about:studies"),     url-prefix("about:support"),
+url-prefix("about:sync-log"),  url-prefix("about:telemetry"),   url-prefix("about:url-classifier"),
+url-prefix("about:unloads"),   url-prefix("about:webauthn"),    url-prefix("about:webrtc"),
+url-prefix("about:welcome"),   url-prefix("about:third-party"), url-prefix("about:windows-messages"),
+url-prefix("chrome:") {{}
   * {
     /* Common with userChrome.css */
     color-scheme: var(--dtui-theme-color-scheme) !important;
