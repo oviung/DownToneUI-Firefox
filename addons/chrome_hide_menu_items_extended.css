@@ -28,7 +28,9 @@ menu[label="Raindrop.io"],
 #context-previewlink,
 #context-bookmarklink,
 #context-sendlinktodevice,
+#context-sep-sendlinktodevice,
 #context-sendpagetodevice,
+#context-sep-sendpagetodevice,
 #context-openlinkinusercontext-menu { display: none !important; }
 
 /* Images */
