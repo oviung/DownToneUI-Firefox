@@ -21,7 +21,9 @@
 3. Go to `about:support` > Search for "Profile Directory" > Open > Copy the "chrome" folder to this location.
 4. Restart Firefox.
 5. *(Optional)* Vertical tabs using Sidebery:
-    * Go to `about:config` and set `sidebar.revamp = false`.
+    * Go to `about:config` and set:<br>
+        `sidebar.revamp = false`<br>
+        *(Linux only)* `widget.gtk.ignore-bogus-leave-notify = 1` *--> fix drag&drop window focus*
     * Install the [Sidebery extension](https://addons.mozilla.org/en-US/firefox/addon/sidebery/).
     * Go to Sidebery settings (right-click extension) > Help > Import addon data > Choose file `sidebery/settings.json`.
     * *(Optional)* For tab previews: Sidebery settings > Search for "Tabs preview" > Enable and grant permissions.
