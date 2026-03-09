@@ -19,3 +19,11 @@
       opacity: 1 !important;
   }
 }
+/* Uncomment this to display the tab close button */
+/*
+#tabbrowser-tabs:not([expanded]) .tab-close-button {
+    display: block !important;
+    margin-top: 4px !important;
+    margin-left: -1px !important;
+}
+*/
