@@ -20,13 +20,12 @@
     `widget.windows.mica.popups = 0`
 3. Go to `about:support` > Search for "Profile Directory" > Open > Copy the "chrome" folder to this location.
 4. Restart Firefox.
-5. *(Optional)* Vertical tabs using Sidebery:
+5. Vertical tabs using Sidebery:
     * Go to `about:config` and set:<br>
         `sidebar.revamp = false`<br>
         *(Linux only)* `widget.gtk.ignore-bogus-leave-notify = 1` *--> fix drag&drop window focus*
     * Install the [Sidebery extension](https://addons.mozilla.org/en-US/firefox/addon/sidebery/).
     * Go to Sidebery settings (right-click extension) > Help > Import addon data > Choose file `sidebery/settings.json`.
-    * *(Optional)* For tab previews: Sidebery settings > Search for "Tabs preview" > Enable and grant permissions.
 
 ## Uninstall
 
@@ -56,6 +55,7 @@ For Sidebery: Sidebery settings > Help > Reset settings.
 ## Notes
 
 * *__Sidebery:__* to open the sidebar tabs (in case you've gone to History or entered Private Mode), click on the extension's icon or use shortcut CTRL+E (shortcut is not working in Windows).
+* Native tabs are not supported due to constant changes (while Sidebery being more stable). Tickets related to native tabs will be closed. Either use Sidebery, or support by creating a pull request with a fix.
 
 ## Credits
 
