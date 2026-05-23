@@ -162,13 +162,13 @@ url-prefix("chrome:") {{}
   .logo-and-wordmark { display: none !important; }
 
   /* Sidebars */
-  .category:hover, button[role="tab"]:hover, .category-subsection:hover,
+  .category:hover, button[role="tab"]:not([selected]):hover, .category-subsection:hover,
   .qa-sidebar-item:hover:not(.qa-sidebar-item-selected):has(.sidebar-item__link) {
     background-color: rgb(var(--dtui-theme-main-color)) !important;
     border-left: 5px solid rgba(var(--dtui-theme-accent-color), var(--dtui-theme-accent-low-alpha)) !important;
   }
   .category[selected], .category.selected, .category-subsection.selected, .qa-sidebar-item-selected,
-  button.category[selected], button[role="tab"][selected] {
+  button.category[selected] {
     background-color: rgb(var(--dtui-theme-secondary-color)) !important;
     border-left: 5px solid rgb(var(--dtui-theme-accent-color)) !important;
   }

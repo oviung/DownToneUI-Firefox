@@ -105,4 +105,11 @@
 
 /* Disable tab folding */
 .exp { display: none; }
-.Tab[data-parent][data-folded] .fav > img { opacity: 1; }
+#root[data-search="false"] .Tab[data-parent="true"] .fav:hover {
+  svg.fav-icon { opacity: 0.7; }
+  .fav-icon { opacity: 1; }
+
+/* Hide number of selected tabs in context menu */
+.sel-len-teleported {
+  display: none ;
+}

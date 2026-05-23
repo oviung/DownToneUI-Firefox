@@ -91,14 +91,12 @@
   --tab-selected-textcolor: rgb(var(--dtui-theme-text-color)) !important;
   --tab-border-radius: var(--dtui-theme-border-radius) !important;
   --tabs-navbar-separator-color: rgba(0, 0, 0, 0) !important;
-  --urlbar-box-bgcolor: rgb(var(--dtui-theme-secondary-color)) !important;
-  --urlbar-box-hover-bgcolor: rgba(var(--dtui-theme-accent-color), var(--dtui-theme-accent-low-alpha)) !important;
-  --urlbar-box-focus-bgcolor: rgba(var(--dtui-theme-accent-color), var(--dtui-theme-accent-low-alpha)) !important;
-  --urlbarView-highlight-background: rgba(var(--dtui-theme-accent-color), var(--dtui-theme-accent-low-alpha)) !important;
-  --urlbarView-highlight-color: rgb(var(--dtui-theme-text-color)) !important;
-  --urlbarView-action-color: rgba(var(--dtui-theme-text-color), var(--dtui-theme-text-mid-alpha)) !important;
-  --urlbarView-hover-background: rgba(var(--dtui-theme-accent-color), var(--dtui-theme-accent-low-alpha)) !important;
-  --urlbarView-separator-color: rgba(0, 0, 0, 0) !important;
+  --urlbar-box-background-color: rgb(var(--dtui-theme-secondary-color)) !important;
+  --urlbarview-background-color-hover: rgba(var(--dtui-theme-accent-color), var(--dtui-theme-accent-low-alpha)) !important;
+  --urlbarview-background-color-selected: rgba(var(--dtui-theme-accent-color), var(--dtui-theme-accent-mid-alpha)) !important;
+  --urlbarview-text-color-action: rgb(var(--dtui-theme-text-color)) !important;
+  --urlbarview-text-color-selected: rgb(var(--dtui-theme-text-color)) !important;
+  --urlbarview-separator-color: rgba(0, 0, 0, 0) !important;
   --arrowpanel-background: rgb(var(--dtui-theme-secondary-color)) !important;
   --arrowpanel-color: rgb(var(--dtui-theme-text-color)) !important;
   --arrowpanel-border-color: var(--dtui-theme-border-color) !important;
@@ -210,8 +208,8 @@ menuitem:hover, menuitem:where([_moz-menuactive]:not([disabled])), menu:where([_
 #moz-card-details, .tabbrowser-tab:not(:hover):not([selected], [multiselected]) .tab-background {
   background-color: rgb(var(--dtui-theme-main-color)) !important;
 }
-input, #moz-toggle-button[aria-pressed="false"], #statuspanel-label, tooltip,
-richlistitem.autocomplete-richlistitem {
+input, #moz-toggle-button[aria-pressed="false"], #urlbar-container toolbarbutton, #main-button .button-background,
+#statuspanel-label, tooltip, #identity-icon-box, richlistitem.autocomplete-richlistitem {
   background-color: rgb(var(--dtui-theme-secondary-color)) !important;
 }
 tooltip, .sidebar-panel, .urlbarView-row:hover .urlbarView-url {
@@ -220,10 +218,14 @@ tooltip, .sidebar-panel, .urlbarView-row:hover .urlbarView-url {
 button#viewButton {
   background-color: rgba(var(--dtui-theme-accent-color), var(--dtui-theme-accent-low-alpha)) !important;
 }
-button#viewButton:hover, #notification-popup-box:hover, richlistitem.autocomplete-richlistitem:hover {
+button#viewButton:hover, box[role="button"]:hover, hbox[role="button"]:hover, #urlbar-container toolbarbutton:hover,
+.urlbar-icon:hover, #main-button:hover .button-background, #identity-icon-box:hover,
+#notification-popup-box:hover, richlistitem.autocomplete-richlistitem:hover {
   background-color: rgba(var(--dtui-theme-accent-color), var(--dtui-theme-accent-mid-alpha)) !important;
 }
-button#viewButton[open], #notification-popup-box[open] {
+button#viewButton[open], box[role="button"]:active, hbox[role="button"]:active, #urlbar-container toolbarbutton:active,
+.urlbar-icon:active, #main-button[aria-expanded="true"] .button-background, #identity-icon-box[open],
+#notification-popup-box[open] {
   background-color: rgb(var(--dtui-theme-accent-color)) !important;
 }
 #stop-button:not([disabled]) {
