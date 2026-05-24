@@ -96,24 +96,28 @@ url-prefix("chrome:") {{}
     --in-content-text-color: rgb(var(--dtui-theme-text-color)) !important;
     --in-content-box-background-odd: rgb(var(--dtui-theme-main-color)) !important;
     --in-content-box-info-background: rgb(var(--dtui-theme-secondary-color)) !important;
-    --in-content-table-header-background: rgba(var(--dtui-theme-accent-color), var(--dtui-theme-accent-low-alpha)) !important;
-    --in-content-table-border-color: var(--dtui-theme-border-color) !important;
     --in-content-border-color: var(--dtui-theme-separator-color) !important;
     --input-text-background-color: rgb(var(--dtui-theme-secondary-color)) !important;
     --background-color-box-info: rgb(var(--dtui-theme-secondary-color)) !important;
     --box-border-radius-inner: calc(var(--dtui-theme-border-radius) - var(--dtui-theme-border-width)) !important;
     --table-row-background-color: rgb(var(--dtui-theme-main-color)) !important;
     --table-row-background-color-alternate: rgb(var(--dtui-theme-secondary-color)) !important;
+    --table-header-background-color: rgba(var(--dtui-theme-accent-color), var(--dtui-theme-accent-low-alpha)) !important;
+    --table-header-text-color: rgb(var(--dtui-theme-text-color)) !important;
+    --table-background-color: rgb(var(--dtui-theme-secondary-color)) !important;
+    --table-border-color: var(--dtui-theme-separator-color) !important;
     --card-outline-color: rgb(var(--dtui-theme-secondary-color)) !important;
     --card-shadow: none !important;
     --card-shadow-hover: var(--dtui-theme-shadow), 0 0 0 5px rgba(var(--dtui-theme-accent-color), var(--dtui-theme-accent-low-alpha)) !important;
   }
 
   /* Shadows */
-  panel-list, div#categories, login-list.initialized, #sidebar, .sidebar, .navigation, .customize-menu,
+  panel-list, #categories, login-list.initialized, #sidebar, .sidebar, .navigation, .customize-menu,
   #toolbar, .wallpaper-list, .topsite-form {
     box-shadow: var(--dtui-theme-shadow) !important;
   }
+  #categories { margin-left: 0px !important; }
+  #categories > *, .page-nav-heading-wrapper { margin-left: 20px !important; }
   #sidebar, .navigation { z-index: 99 !important; }
   button.cancel, button.done { box-shadow: none !important; }
 
@@ -134,7 +138,7 @@ url-prefix("chrome:") {{}
   .tab-button[selected] { border-top-color: rgb(var(--dtui-theme-accent-color)) !important; }
 
   /* Specific elements styling */
-  login-list.initialized, .category-subsection, .meta.text-deemphasized, .app, .customize-menu,
+  dialog, login-list.initialized, .category-subsection, .meta.text-deemphasized, .app, .customize-menu,
   .close-button-wrapper, #migrationWizardDialog, .topsite-form {
     background-color: rgb(var(--dtui-theme-main-color)) !important;
   }
@@ -171,6 +175,9 @@ url-prefix("chrome:") {{}
   button.category[selected] {
     background-color: rgb(var(--dtui-theme-secondary-color)) !important;
     border-left: 5px solid rgb(var(--dtui-theme-accent-color)) !important;
+  }
+  button[role="tab"][aria-selected="true"] {
+    background-color: rgb(var(--dtui-theme-secondary-color)) !important;
   }
   div#categories { margin: 0 !important; }
 }
