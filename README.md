@@ -57,7 +57,10 @@ For Sidebery: Sidebery settings > Help > Reset settings.
 ## Notes
 
 * *__Sidebery:__* to open the sidebar tabs (in case you've gone to History or entered Private Mode), click on the extension's icon or use shortcut CTRL+E (shortcut is not working in Windows).
-* Native tabs are not supported due to constant changes (while Sidebery being more stable). Tickets related to native tabs will be closed. Either use Sidebery, or support by creating a pull request with a fix.
+* Native tabs are not supported due to constant changes (while Sidebery being more stable). Tickets related to native tabs will be closed. You can either:
+    * Use Sidebery according to install instructions for vertical tabs
+    * Disable the `sidebar.css` module in `chrome/userChrome.css`
+    * Contribute by creating a pull request with a fix
 
 ## Credits
 

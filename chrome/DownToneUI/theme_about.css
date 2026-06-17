@@ -117,7 +117,10 @@ url-prefix("chrome:") {{}
     box-shadow: var(--dtui-theme-shadow) !important;
   }
   #categories { margin-left: 0px !important; }
-  #categories > *, .page-nav-heading-wrapper { margin-left: 20px !important; }
+  #categories > *, .page-nav-heading-wrapper {
+    padding-left: 20px !important;
+    box-sizing: border-box !important;
+  }
   #sidebar, .navigation { z-index: 99 !important; }
   button.cancel, button.done { box-shadow: none !important; }
 
@@ -138,7 +141,7 @@ url-prefix("chrome:") {{}
   .tab-button[selected] { border-top-color: rgb(var(--dtui-theme-accent-color)) !important; }
 
   /* Specific elements styling */
-  dialog, login-list.initialized, .category-subsection, .meta.text-deemphasized, .app, .customize-menu,
+  body, dialog, login-list.initialized, .category-subsection, .meta.text-deemphasized, .app, .customize-menu,
   .close-button-wrapper, #migrationWizardDialog, .topsite-form {
     background-color: rgb(var(--dtui-theme-main-color)) !important;
   }
@@ -163,7 +166,7 @@ url-prefix("chrome:") {{}
   a[target], .enable-custom-image-input { color: var(--dtui-theme-accent-high-contrast) !important; }
   .danger-button { color: rgb(var(--dtui-theme-main-color)) !important; }
   .weatherCard:not(:hover) .weatherButtonContextMenuWrapper { opacity: 0 !important; }
-  .logo-and-wordmark { display: none !important; }
+  .logo-and-wordmark, .info-border { display: none !important; }
 
   /* Sidebars */
   .category:hover, button[role="tab"]:not([selected]):hover, .category-subsection:hover,

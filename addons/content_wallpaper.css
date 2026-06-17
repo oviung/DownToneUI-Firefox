@@ -3,7 +3,7 @@
  * NOTE: add your image to chrome/DownToneUI/ and name it "wallpaper.jpg"
  * ========================================================================= */
 
-@-moz-document url-prefix("about:home"), url-prefix("about:newtab") {{}
+@-moz-document url-prefix("about:home"), url-prefix("about:newtab"), url-prefix(about:privatebrowsing) {{}
   body {
     background: url("wallpaper.jpg") !important;
     background-size: cover !important;
