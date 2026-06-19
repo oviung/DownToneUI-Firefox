@@ -1,0 +1,27 @@
+/* ============================================================================
+ * Theme external pages
+ * ========================================================================= */
+
+* {
+  /* Reader view */
+  body:has(> div > div.reader-toolbar) {
+    --main-background: rgb(var(--dtui-theme-main-color)) !important;
+    --main-foreground: rgb(var(--dtui-theme-text-color)) !important;
+    --primary-color: rgb(var(--dtui-theme-accent-color)) !important;
+    --visited-link-foreground: var(--dtui-theme-accent-high-contrast) !important;
+    --link-foreground: var(--dtui-theme-accent-high-contrast) !important;
+  }
+
+  /* Network error page */
+  &:has(net-error-card) {
+    --background-color-canvas: rgb(var(--dtui-theme-main-color)) !important;
+    --link-color: var(--dtui-theme-accent-high-contrast) !important;
+    --link-color-hover: var(--dtui-theme-accent-high-contrast) !important;
+    --link-color-active: var(--dtui-theme-accent-high-contrast) !important;
+    --link-color-visited: var(--dtui-theme-accent-high-contrast) !important;
+    --button-text-color-primary: rgb(var(--dtui-theme-text-color)) !important;
+    --color-accent-primary: rgba(var(--dtui-theme-accent-color), var(--dtui-theme-accent-low-alpha)) !important;
+    --button-background-color-primary-hover: rgba(var(--dtui-theme-accent-color), var(--dtui-theme-accent-mid-alpha)) !important;
+    --button-background-color-primary-active: rgb(var(--dtui-theme-accent-color)) !important;
+  }
+}
