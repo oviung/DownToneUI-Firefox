@@ -14,13 +14,3 @@
   #urlbar:not([open]) { outline: var(--dtui-theme-border-width) solid rgba(128, 0, 215, 0.7) !important; }
   #urlbar-background { outline: none !important; }
 }
-
-/* URLbar extend animation */
-#urlbar[breakout-extend] {
-  transform-origin: top;
-  animation: urlbar-animation var(--dtui-urlbar-animation-speed) ease-out !important;
-}
-@keyframes urlbar-animation {
-  0% { transform: scaleY(0.95); }
-  100% { transform: scaleY(1); }
-}

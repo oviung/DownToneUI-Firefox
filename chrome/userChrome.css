@@ -4,13 +4,14 @@
  * Imports (remove to disable modifications)
  * ========================================================================= */
 
+@import "DownToneUI/theme_UI.css";
+@import "DownToneUI/theme_scrollbar.css";
 @import "DownToneUI/bookmarks.css";
 @import "DownToneUI/menus.css";
 @import "DownToneUI/navbar.css";
-@import "DownToneUI/theme_scrollbar.css";
-@import "DownToneUI/theme_UI.css";
 @import "DownToneUI/sidebar.css";
 @import "DownToneUI/compact_UI.css";
+@import "DownToneUI/animations.css";
 
 /* Your own customizations */
 @import "DownToneUI/override_globals.css";

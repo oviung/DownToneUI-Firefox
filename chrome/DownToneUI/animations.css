@@ -1,0 +1,30 @@
+/* URLbar extend animation */
+#urlbar[breakout-extend] {
+  transform-origin: top;
+  animation: urlbar-animation var(--dtui-urlbar-animation-speed) ease-out !important;
+}
+@keyframes urlbar-animation {
+  0% { transform: scaleY(0.95); }
+  100% { transform: scaleY(1); }
+}
+
+/* Menu popup animations */
+.animatable-menupopup, panel[type="arrow"] { &:not([animate="false"]) { transition-duration: 0s !important; }}
+
+#appMenu-popup[animate="open"], #unified-extensions-panel[animate="open"], .panel-no-padding[animate="open"],
+.bookmark-item[open] .toolbar-menupopup {
+  animation: popup-animation var(--dtui-menu-animation-speed) ease-out !important;
+}
+#window-modal-dialog[open] {
+  animation: popup-animation var(--dtui-window-animation-speed) ease-out !important;
+}
+@keyframes popup-animation {
+  from {
+    transform: translate3d(0, 20px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
