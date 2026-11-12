@@ -60,11 +60,15 @@
   --toolbar-el-overlay-selected-bg: rgb(var(--dtui-theme-secondary-color));
   --toolbar-el-overlay-selected-border: rgb(var(--dtui-theme-accent-color));
   --status-notice: var(--dtui-theme-accent-high-contrast);
+  --badge-urgent-bg: var(--dtui-theme-accent-high-contrast);
+  --tabs-notification-badge-dot-bg: var(--dtui-theme-accent-high-contrast);
 
   --general-margin: 0px;
   --tabs-lvl-opacity: 0.25;
   --tabs-indent: 12px;
   --ctx-menu-min-width: 170px;
+
+  padding-top: 5px;
 }
 
 .progress-spinner {

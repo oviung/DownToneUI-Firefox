@@ -76,6 +76,7 @@
   #sidebar-box {
     min-width: var(--dtui-sidebar-collapsed-width) !important;
     max-width: var(--dtui-sidebar-collapsed-width) !important;
+    padding-inline-start: 0px !important;
   }
   #sidebar-box:hover, #sidebar-box[sidebarcommand="viewBookmarksSidebar"], #sidebar-box[sidebarcommand="viewHistorySidebar"] {
     #sidebar { min-width: var(--dtui-sidebar-extended-width) !important; }
